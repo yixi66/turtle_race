@@ -16,31 +16,55 @@ kathy = turtle.Turtle()
 kathy.shape('turtle')
 kathy.color('green')
 
-# finish line
-cathy.penup()
-cathy.pensize(5)
-cathy.goto(300,300)
-cathy.pendown()
-cathy.goto(300,-300)
-cathy.write('finish',font=('Arial', 30, "normal"))
+
 
 # start line
 kathy.penup()
 kathy.pensize(5)
-kathy.goto(-300,300)
+kathy.goto(-300,250)
 kathy.pendown()
 kathy.goto(-300,-300)
-kathy.write('start',font=('Arial', 30, "normal"))
+
+turtle.penup()
+turtle.color("gold")
+turtle.goto(-310,-330)
+turtle.write('start',font=('Arial', 30, "normal"))
+
+# finish line
+cathy.penup()
+cathy.pensize(5)
+cathy.goto(300,250)
+cathy.pendown()
+cathy.goto(300,-300)
+
+turtle.penup()
+turtle.color("gold")
+turtle.goto(280,-330)
+turtle.write('finish',font=('Arial', 30, "normal"))
+
 
 
 # cathy back to the start line
 cathy.penup()
-cathy.goto(-320,200)
+cathy.goto(-320,150)
 
 
 # kathy back to the start line
 kathy.penup()
-kathy.goto(-320,-200)
+kathy.goto(-320,-150)
+
+# write cathy distance
+turtle.color("linen")
+turtle.penup()
+turtle.goto(-290,300)
+turtle.write('Cathy distance: 0', font=('Arial', 20, "normal"))
+
+
+# write kathy distance
+turtle.penup()
+turtle.goto(-290,280)
+turtle.write('Kathy distance: 0', font=('Arial', 20, "normal"))
+turtle.pendown
 
 
 # ready
@@ -67,16 +91,16 @@ while(cathy_distance < 600 and kathy_distance < 600):
     print("cathy_distance: ", cathy_distance)
     print('kathy_distance: ', kathy_distance)
 
-turtle.color("linen")
-turtle.penup()
-turtle.goto(-200,0)
 
+
+turtle.goto(-200,0)
 winner = cathy
-if cathy_distance >= 600 and kathy_distance < 600:
+if cathy_distance >= 600 and kathy_distance < cathy_distance:
     print(" Cathy  is the winner")
     print("kathy_distance: ",kathy_distance)
     print("cathy_distance: ",cathy_distance)
     turtle.write('Cathy is winner', font=('Arial', 70, "normal"))
+    
 
 else:
     print(" Kathy  is the winner")
@@ -90,47 +114,6 @@ else:
 
 
 
-
-# cathy.forward(random.choice(distance))
-# kathy.forward(random.choice(distance))
-# cathy.forward(random.choice(distance))
-# kathy.forward(random.choice(distance))
-# cathy.forward(random.choice(distance))
-# kathy.forward(random.choice(distance))
-# cathy.forward(random.choice(distance))
-# kathy.forward(random.choice(distance))
-# cathy.forward(random.choice(distance))
-# kathy.forward(random.choice(distance))
-# cathy.forward(random.choice(distance))
-# kathy.forward(random.choice(distance))
-# cathy.forward(random.choice(distance))
-# kathy.forward(random.choice(distance))
-# cathy.forward(random.choice(distance))
-# kathy.forward(random.choice(distance))
-
-
-# total_distance = 300
-
-# if cathy.xcor() > 300:
-#     cathy.write("cathy win!")
-# else:
-#     cathy.penup()
-#     cathy.goto(-50, 500)
-#     cathy.pendown()
-#     cathy.write("Distance: ","cathy win!" font=('Arial', 48, "italic"))
-#     cathy.end_fill()
-
-
-
-
-
-# from random import randint
-# for i in range(120):
-#     cathy.forward(randint(1,10))
-#     kathy.forward(randint(1,10))
-
-# if cathy.xcor() > 600:
-#     cathy.hideturtle()
 
 
 
