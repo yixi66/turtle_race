@@ -68,8 +68,20 @@ while(cathy_distance < 600 and kathy_distance < 600):
     print('kathy_distance: ', kathy_distance)
 
 
-# cathy.clear()
-# kathy.clear()
+
+winner = cathy
+if cathy_distance >= 600:
+    print(" Cathy  is the winner")
+    print("kathy_distance: ",kathy_distance)
+    print("cathy_distance: ",cathy_distance)
+    turtle.write('Cathy is winner',align='right', font=('Arial', 30, "normal"))
+
+else:
+    print(" Kathy  is the winner")
+    print("kathy_distance: ",kathy_distance)
+    print("cathy_distance: ",cathy_distance)
+    turtle.write('Kathy is winner',align='right', font=('Arial', 30, "normal"))
+
 
 # print(input("how many races would you like to see?  :  "))
 
