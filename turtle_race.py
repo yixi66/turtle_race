@@ -35,33 +35,46 @@ kathy.write('start',font=('Arial', 30, "normal"))
 
 # cathy back to the start line
 cathy.penup()
-cathy.goto(-300,200)
-cathy.pendown()
+cathy.goto(-320,200)
+
 
 # kathy back to the start line
 kathy.penup()
-kathy.goto(-300,-200)
-
-time.sleep(2)
+kathy.goto(-320,-200)
 
 
-distance = [50, 70, 80, 90, 100, 120]
+# ready
+time.sleep(1)
+
+# distance
+total_distance = 600
+cathy_distance = 0
+kathy_distance = 0
+
+
+speeds = [50, 70, 80, 90, 100, 120]
 from random import choice
-while cathy.xcor() <= 300 and kathy.xcor <= 300:
-    cathy.forward(random.choice(distance))
-    kathy.forward(random.choice(distance))
+while(cathy_distance < 600 and kathy_distance < 600):
+    cathy_speed = random.choice(speeds)
+    kathy_speed = random.choice(speeds)
+
+    cathy_distance += cathy_speed
+    kathy_distance += kathy_speed
+
+    cathy.forward(cathy_speed)
+    kathy.forward(kathy_speed)
+
+    print("cathy_distance: ", cathy_distance)
+    print('kathy_distance: ', kathy_distance)
 
 
-if cathy.xcor() > kathy.xcor():
-    print("cathy win!")
-else:
-    print("kathy win!")
+# cathy.clear()
+# kathy.clear()
+
+# print(input("how many races would you like to see?  :  "))
 
 
-cathy.clear()
-kathy.clear()
 
-print(input"how many races would you like to see?  :  ")
 
 
 # cathy.forward(random.choice(distance))
