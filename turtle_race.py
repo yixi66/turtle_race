@@ -2,6 +2,16 @@ import turtle
 import time
 import random
 
+  
+# ask user 
+number_of_times = turtle.textinput("Question", "How many races would you like to see?") 
+if number_of_times:
+    print("The user want to see", number_of_times, "races")
+
+else:
+    print("User don't want to answer.")
+
+
 turtle.bgcolor("rosy brown")
 
 
